@@ -1,4 +1,3 @@
-
 import java.util.Random;
 
 public class Main {
@@ -16,22 +15,27 @@ public class Main {
         Random rand = new Random();
         int input = rand.nextInt(3);
         
-        if(input == 2) {
-        	System.out.println("*Employee is Present");
-        	System.out.println("Days:"+"     "+"Fullwage");
-        	System.out.println("Day 1"+"     "+fwage);
-        }else if(input == 0){
-        	System.out.println("*Employee is Absent");
-        	System.out.println("Days:"+"    "+"Nowage");
-        	System.out.println("Day 1"+"    "+nowage);
-        }else{
-        	System.out.println("*Employee is Parttime");
-        	System.out.println("Days:"+"    "+"Halfwage");
-        	System.out.println("Day 1"+"    "+hwage);
-        
-        
-	}
-
+       switch(input) {
+       
+       case 2:
+    	   System.out.println("*Employee is Present");
+       	   System.out.println("Days:"+"     "+"Fullwage");
+       	   System.out.println("Day 1"+"     "+fwage);
+       	   break;
+       case 0:
+    	   System.out.println("*Employee is Absent");
+       	   System.out.println("Days:"+"    "+"Nowage");
+       	   System.out.println("Day 1"+"    "+nowage);
+       	   break;
+       case 1:
+    	   System.out.println("*Employee is Parttime");
+           System.out.println("Days:"+"    "+"Halfwage");
+       	   System.out.println("Day 1"+"    "+hwage);
+       	   break;
+       default:
+    	   System.out.println("No such case");
+    	   break;
+       }
 }
 	}
 
