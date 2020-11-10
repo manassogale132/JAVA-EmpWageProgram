@@ -7,30 +7,31 @@ public class Main {
 		int fwage=160;
 		int hwage=80;
 	    int nowage=0;
+	    int sum =0;
 		System.out.println("-Welcome to Employee-");
 		System.out.println("-----------------------------------------------------------------");
         System.out.println("-Wage Computation Program-");
         System.out.println("-----------------------------------------------------------------");
      
+        System.out.println("Day No:"+"     "+"Wage"+"     "+"TotalWage");
+        
+        for(int i=0;i<=20;i++) {
         Random rand = new Random();
         int input = rand.nextInt(3);
         
        switch(input) {
        
        case 2:
-    	   System.out.println("*Employee is Present");
-       	   System.out.println("Days:"+"     "+"Fullwage");
-       	   System.out.println("Day 1"+"     "+fwage);
+    	   sum=sum+fwage;
+       	   System.out.println("Day "+i+"        "+ fwage+"        "+sum);
        	   break;
        case 0:
-    	   System.out.println("*Employee is Absent");
-       	   System.out.println("Days:"+"    "+"Nowage");
-       	   System.out.println("Day 1"+"    "+nowage);
+    	   sum=sum+nowage;     
+       	   System.out.println("Day "+i+"        "+ nowage+"        "+sum);
        	   break;
        case 1:
-    	   System.out.println("*Employee is Parttime");
-           System.out.println("Days:"+"    "+"Halfwage");
-       	   System.out.println("Day 1"+"    "+hwage);
+    	   sum=sum+hwage;  
+           System.out.println("Day "+i+"        "+ hwage+"        "+sum);
        	   break;
        default:
     	   System.out.println("No such case");
@@ -38,5 +39,5 @@ public class Main {
        }
 }
 	}
-
+	}
 	
